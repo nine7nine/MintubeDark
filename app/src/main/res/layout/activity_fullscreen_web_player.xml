@@ -5,4 +5,5 @@
     android:id="@+id/layout_fullscreen"
     android:orientation="vertical"
     android:fitsSystemWindows="true"
+    android:layout_marginBottom="-2dp"
     android:background="#000" />
