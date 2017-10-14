@@ -11,21 +11,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
+
         <ImageView
             android:id="@+id/repeat_type"
             android:layout_width="50dp"
             android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="-4dp"
+            android:adjustViewBounds="false"
             android:src="@drawable/ic_repeat_none" />
+
         <ImageView
             android:id="@+id/entire_width"
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_entire_width"/>
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="-4dp"
+            android:src="@drawable/ic_entire_width" />
+
         <ImageView
             android:id="@+id/fullscreen"
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_fullscreen"/>
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="-4dp"
+            android:src="@drawable/ic_fullscreen" />
     </LinearLayout>
 
 </LinearLayout>
