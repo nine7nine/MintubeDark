@@ -27,7 +27,8 @@ public class FullscreenWebPlayer extends Activity {
 
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.MATCH_PARENT
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED
         );
 
         parent = (ViewGroup) player.getParent();
