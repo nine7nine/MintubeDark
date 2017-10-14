@@ -47,21 +47,21 @@ public class YTubeView extends Activity{//extends YouTubeFailureRecoveryActivity
             editor.putInt(getString(R.string.player_type), 0);
             //Playback Quality
             //0 = auto
-            //1 = hd1080
-            //2 = hd720
-            //3 = large(480p)
-            //4 = medium(360p)
-            //5 = small(240p)
-            //6 = tiny(144p)
-            editor.putInt(getString(R.string.videoQuality), 3);
+            //1 = hd2160
+            //2 = hd1440
+            //3 = hd1080
+            //4 = hd720
+            //5 = large(480p)
+            //6 = medium(360p)
+            //7 = small(240p)
+            //8 = tiny(144p)
+            editor.putInt(getString(R.string.videoQuality), 5);
             //Finish sevice if video ended
             editor.putBoolean(getString(R.string.finishOnEnd), false);
-            //Show Rate and Star after 5 times closing
-            editor.putInt(getString(R.string.count), 0);
             editor.commit();
         }
         else {
-            Constants.playbackQuality = sharedPref.getInt(getString(R.string.videoQuality), 3);
+            Constants.playbackQuality = sharedPref.getInt(getString(R.string.videoQuality), 5);
             Constants.finishOnEnd = sharedPref.getBoolean(getString(R.string.finishOnEnd),false);
         }
 //

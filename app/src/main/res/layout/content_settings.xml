@@ -11,7 +11,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:orientation="vertical"
     tools:context="com.shapps.mintubeapp.SettingsActivity"
-    tools:showIn="@layout/activity_settings">
+    tools:showIn="@layout/activity_settings"
+    android:background="#000">
 
     <TextView
         android:layout_width="match_parent"
@@ -42,7 +43,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:textSize="15dp"
-                    android:text="No. Of Repeats"/>
+                    android:text="No. Of Repeats"
+                    android:textColor="#ccc" />
                 <LinearLayout
                     android:layout_weight="2"
                     android:gravity="center"
@@ -57,17 +59,21 @@
                         android:layout_height="match_parent"
                         android:text="-"
                         android:textStyle="bold"
-                        android:background="#ffd5d5"
                         android:textAppearance="@style/TextAppearance.AppCompat.Button"
-                        android:textColor="#bbb"
-                        style="?borderlessButtonStyle" />
+                        android:textColor="#fff"
+                        style="?borderlessButtonStyle"
+                        android:gravity="center|center_vertical|center_horizontal"
+                        android:background="#222" />
                     <TextView
                         android:gravity="center"
                         android:layout_weight="1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:textSize="15dp"
-                        android:text="0"/>
+                        android:text="0"
+                        android:textColor="#09a5ff"
+                        android:textStyle="bold"
+                        android:background="#111" />
                     <Button
                         android:id="@+id/increase_repeat_count"
                         android:layout_weight="1"
@@ -75,10 +81,11 @@
                         android:layout_height="match_parent"
                         android:text="+"
                         android:textStyle="bold"
-                        android:background="#ffd5d5"
                         android:textAppearance="@style/TextAppearance.AppCompat.Button"
-                        android:textColor="#bbb"
-                        style="?borderlessButtonStyle" />
+                        android:textColor="#fff"
+                        style="?borderlessButtonStyle"
+                        android:gravity="center|center_vertical|center_horizontal"
+                        android:background="#222" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -96,7 +103,7 @@
                 android:layout_weight="3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textColor="#353535"
+                android:textColor="#ccc"
                 android:textSize="15dp"
                 android:text="Video Quality"/>
 
@@ -107,7 +114,9 @@
                 android:layout_width="0dp"
                 android:textSize="15dp"
                 android:layout_height="match_parent"
-                android:text="1080p"/>
+                android:textColor="#09a5ff"
+                android:text="1080p"
+                android:background="#111" />
         </LinearLayout>
     </LinearLayout>
 
@@ -132,6 +141,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="15dp"
+            android:textColor="#eee"
             android:text="Player Type"/>
 
         <TextView
@@ -139,8 +149,10 @@
             android:layout_weight="2"
             android:layout_width="0dp"
             android:textSize="15dp"
+            android:textColor="#09a5ff"
             android:layout_height="match_parent"
-            android:text="Web Player"/>
+            android:text="Web Player"
+            android:background="#111" />
     </LinearLayout>
 
     <LinearLayout
@@ -157,6 +169,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="15dp"
+            android:textColor="#eee"
             android:text="FullScreen on Rotate"/>
         <LinearLayout
             android:layout_weight="1"
@@ -167,7 +180,8 @@
                 android:id="@+id/fullscreen_on_rotate"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:buttonTint="#ccc" />
         </LinearLayout>
     </LinearLayout>
 
@@ -184,7 +198,7 @@
             android:layout_weight="4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:textColor="#353535"
+            android:textColor="#ccc"
             android:textSize="15dp"
             android:text="Stop if Nothing is playing"/>
         <LinearLayout
@@ -196,7 +210,8 @@
                 android:id="@+id/stop_not_playing"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:buttonTint="#ccc" />
         </LinearLayout>
     </LinearLayout>
 
@@ -220,7 +235,7 @@
             android:gravity="center|left"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#353535"
+            android:textColor="#ccc"
             android:textSize="15dp"
             android:text="About"/>
     </LinearLayout>

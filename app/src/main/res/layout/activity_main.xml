@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:id="@+id/coordinator_layout"
-    android:background="#fff"
+    android:background="#000"
     tools:context="com.shapps.mintubeapp.MainActivity">
 
     <android.support.design.widget.AppBarLayout

@@ -4,4 +4,5 @@
     android:layout_height="match_parent"
     android:id="@+id/layout_fullscreen"
     android:orientation="vertical"
-    android:fitsSystemWindows="true"/>
+    android:fitsSystemWindows="true"
+    android:background="#000" />

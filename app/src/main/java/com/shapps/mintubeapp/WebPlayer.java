@@ -28,7 +28,7 @@ public class WebPlayer {
 
 //         For debugging using chrome on PC
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                player.setWebContentsDebuggingEnabled(true);
+                player.setWebContentsDebuggingEnabled(false);
             }
 
         player.setWebChromeClient(new WebChromeClient());

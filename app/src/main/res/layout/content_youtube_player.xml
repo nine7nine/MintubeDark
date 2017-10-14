@@ -10,12 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.shapps.mintubeapp.YouTube.YoutubePlayer"
-    tools:showIn="@layout/activity_youtube_player">
+    tools:showIn="@layout/activity_youtube_player"
+    android:background="#000">
 
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/youtube_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></com.google.android.youtube.player.YouTubePlayerView>
+        android:layout_height="wrap_content"
+        android:background="#000"></com.google.android.youtube.player.YouTubePlayerView>
 
     <Button
         android:layout_below="@id/youtube_view"

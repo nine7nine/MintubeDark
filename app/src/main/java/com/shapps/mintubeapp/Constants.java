@@ -23,13 +23,15 @@ public class Constants {
     public  static  int noOfRepeats = 0;
     //Playback Quality
     //0 = auto
-    //1 = hd1080
-    //2 = hd720
-    //3 = large(480p)
-    //4 = medium(360p)
-    //5 = small(240p)
-    //6 = tiny(144p)
-    public  static  int playbackQuality = 3;
+    //1 = hd2160
+    //2 = hd1440
+    //3 = hd1080
+    //4 = hd720
+    //5 = large(480p)
+    //6 = medium(360p)
+    //7 = small(240p)
+    //8 = tiny(144p)
+    public  static  int playbackQuality = 5;
     //Finish service on end video
     public static boolean finishOnEnd = false;
 
@@ -40,18 +42,24 @@ public class Constants {
             strPlaybackQuality = "auto";
         }
         else if (playbackQuality == 1){
-            strPlaybackQuality = "hd1080";
+            strPlaybackQuality = "hd2160";
         }
         else if (playbackQuality == 2){
-            strPlaybackQuality = "hd720";
+            strPlaybackQuality = "hd1440";
         }
         else if (playbackQuality == 3){
-            strPlaybackQuality = "large";
+            strPlaybackQuality = "hd1080";
         }
         else if (playbackQuality == 4){
-            strPlaybackQuality = "medium";
+            strPlaybackQuality = "hd720";
         }
         else if (playbackQuality == 5){
+            strPlaybackQuality = "large";
+        }
+        else if (playbackQuality == 6){
+            strPlaybackQuality = "medium";
+        }
+        else if (playbackQuality == 7){
             strPlaybackQuality = "small";
         }
         else{

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MinTube</string>
+    <string name="app_name" translatable="false">MinTubeDark</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_youtube_player">YoutubePlayer</string>
     <string name="error_player">Unable to load.</string>
