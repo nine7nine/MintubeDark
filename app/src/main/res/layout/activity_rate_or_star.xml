@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Like the App ?"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true" />
 
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Facing any Problem / Want any Feature ?"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_below="@+id/star_on_GitHub"
         android:layout_marginTop="20dp"
         android:layout_alignParentLeft="true"/>

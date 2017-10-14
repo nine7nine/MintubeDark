@@ -42,7 +42,7 @@
                     android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:text="No. Of Repeats"
                     android:textColor="#ccc" />
                 <LinearLayout
@@ -69,7 +69,7 @@
                         android:layout_weight="1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:text="0"
                         android:textColor="#09a5ff"
                         android:textStyle="bold"
@@ -104,7 +104,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textColor="#ccc"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:text="Video Quality"/>
 
             <TextView
@@ -112,7 +112,7 @@
                 android:gravity="center"
                 android:layout_weight="2"
                 android:layout_width="0dp"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:layout_height="match_parent"
                 android:textColor="#09a5ff"
                 android:text="1080p"
