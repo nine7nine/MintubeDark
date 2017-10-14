@@ -716,13 +716,7 @@ public class PlayerService extends Service implements View.OnClickListener{
 
             notificationManager.notify(Constants.NOTIFICATION_ID.FOREGROUND_SERVICE, notification);
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
+        } catch (InterruptedException | ExecutionException | MalformedURLException | JSONException e) {
             e.printStackTrace();
         }
     }
