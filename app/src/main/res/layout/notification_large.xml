@@ -28,7 +28,7 @@
             <TextView
                 android:id="@+id/title"
                 android:layout_width="0dp"
-                android:layout_weight="20"
+                android:layout_weight="19.31"
                 android:layout_height="50dp"
                 android:padding="5dp"
                 android:text="Loading Title"
@@ -37,12 +37,14 @@
                 android:ellipsize="end"
                 android:textStyle="bold"
                 android:textColor="#fff"/>
+
             <ImageView
                 android:id="@+id/stop_service"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="top|right"
                 android:src="@drawable/ic_close"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="top|right" />
+                android:layout_weight="0.86" />
         </LinearLayout>
         <TextView
             android:id="@+id/author"
