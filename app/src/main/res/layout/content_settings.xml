@@ -140,7 +140,7 @@
             android:layout_weight="3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#eee"
             android:text="Player Type"/>
 
@@ -148,7 +148,7 @@
             android:gravity="center"
             android:layout_weight="2"
             android:layout_width="0dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#09a5ff"
             android:layout_height="match_parent"
             android:text="Web Player"
@@ -168,7 +168,7 @@
             android:layout_weight="4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#eee"
             android:text="FullScreen on Rotate"/>
         <LinearLayout
@@ -199,7 +199,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textColor="#ccc"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:text="Stop if Nothing is playing"/>
         <LinearLayout
             android:layout_weight="1"
@@ -236,7 +236,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="#ccc"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:text="About"/>
     </LinearLayout>
 
