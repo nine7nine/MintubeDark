@@ -283,7 +283,6 @@ public class PlayerService extends Service implements View.OnClickListener{
             windowManager.removeView(serviceHead);
             windowManager.removeView(serviceClose);
             webPlayer.destroy();
-            }
         }
     }
 
