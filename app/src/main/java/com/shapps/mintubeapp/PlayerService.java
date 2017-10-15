@@ -283,21 +283,6 @@ public class PlayerService extends Service implements View.OnClickListener{
             windowManager.removeView(serviceHead);
             windowManager.removeView(serviceClose);
             webPlayer.destroy();
-            //Show Rate or Star
-            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getAppContext());
-            int val =  sharedPreferences.getInt(getString(R.string.count), 5);
-            Log.d("Current Count is ", String.valueOf(val));
-            if(val < 15) {
-                val += 1;
-                if (val > 4) {
-                    val = 0;
-                }
-                SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putInt(getString(R.string.count), val);
-                editor.commit();
-                if (val == 0) {
-                    startActivity(new Intent(getAppContext(), RateOrStar.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-                }
             }
         }
     }
