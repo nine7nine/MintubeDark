@@ -18,7 +18,7 @@
             android:name=".MainActivity"
             android:hardwareAccelerated="true"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="sensor"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -82,8 +82,9 @@
         </activity>
         <activity
             android:name=".FullscreenWebPlayer"
+            android:hardwareAccelerated="true"
             android:excludeFromRecents="true"
-            android:screenOrientation="landscape"
+            android:screenOrientation="sensorLandscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <activity
