@@ -82,10 +82,10 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
 
         viewStub = (ViewStub) findViewById(R.id.view_stub);
 
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
 
         if(isInternetAvailable(mainAct)) {
 
