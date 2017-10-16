@@ -339,10 +339,6 @@ public class PlayerService extends Service implements View.OnClickListener{
 
         notification = builder.build();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            notification.bigContentView = viewBig;
-        }
-
         //Set Image and Headings
         setImageTitleAuthor(VID_ID);
 

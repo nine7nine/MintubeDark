@@ -26,15 +26,6 @@ public class WebPlayer {
     public void setupPlayer() {
         player.getSettings().setJavaScriptEnabled(true);
 
-//         For debugging using chrome on PC
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                player.setWebContentsDebuggingEnabled(false);
-            }
-
-        player.setWebChromeClient(new WebChromeClient());
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            player.getSettings().setMediaPlaybackRequiresUserGesture(false);
-        }
         player.getSettings().setUserAgentString("Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:21.0.0) Gecko/20121011 Firefox/21.0.0");
 
         //----------------------------To get Player Id-------------------------------------------
