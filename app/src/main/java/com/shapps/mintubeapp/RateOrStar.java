@@ -84,7 +84,7 @@ public class RateOrStar extends AppCompatActivity implements View.OnClickListene
                 SharedPreferences.Editor editor =
                         PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
                 editor.putInt(getString(R.string.count), 20);
-                editor.commit();
+                editor.apply();
                 this.finish();
                 break;
         }

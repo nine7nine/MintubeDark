@@ -58,7 +58,7 @@ public class YTubeView extends Activity{//extends YouTubeFailureRecoveryActivity
             editor.putInt(getString(R.string.videoQuality), 5);
             //Finish sevice if video ended
             editor.putBoolean(getString(R.string.finishOnEnd), false);
-            editor.commit();
+            editor.apply();
         }
         else {
             Constants.playbackQuality = sharedPref.getInt(getString(R.string.videoQuality), 5);

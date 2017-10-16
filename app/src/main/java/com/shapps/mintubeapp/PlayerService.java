@@ -822,7 +822,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                 SharedPreferences.Editor editor = sharedPref.edit();
                 if (Constants.repeatType == 0) {
                     editor.putInt(getString(R.string.repeat_type), 1);
-                    editor.commit();
+                    editor.apply();
                     Constants.repeatType = 1;
                     if (Constants.linkType == 1) {
                         webPlayer.loadScript(JavaScript.setLoopPlaylist());
@@ -830,7 +830,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                     updateRepeatTypeImage();
                 } else if (Constants.repeatType == 1) {
                     editor.putInt(getString(R.string.repeat_type), 2);
-                    editor.commit();
+                    editor.apply();
                     Constants.repeatType = 2;
                     if (Constants.linkType == 1) {
                         webPlayer.loadScript(JavaScript.unsetLoopPlaylist());
@@ -838,7 +838,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                     updateRepeatTypeImage();
                 } else if (Constants.repeatType == 2) {
                     editor.putInt(getString(R.string.repeat_type), 0);
-                    editor.commit();
+                    editor.apply();
                     Constants.repeatType = 0;
                     if (Constants.linkType == 1) {
                         webPlayer.loadScript(JavaScript.unsetLoopPlaylist());

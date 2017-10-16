@@ -61,7 +61,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                     Constants.finishOnEnd = isChecked;
                     SharedPreferences.Editor editor = sharedPref.edit();
                     editor.putBoolean(getString(R.string.finishOnEnd), isChecked);
-                    editor.commit();
+                    editor.apply();
                 }
             }
         });
@@ -88,7 +88,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                         Constants.playbackQuality = checked[0];
                         SharedPreferences.Editor editor = sharedPref.edit();
                         editor.putInt(getString(R.string.videoQuality), checked[0]);
-                        editor.commit();
+                        editor.apply();
                         quality.setText(Constants.getPlaybackQuality());
                         Log.d("New Quality", Constants.getPlaybackQuality());
                     }
