@@ -1,7 +1,6 @@
 package com.shapps.mintubeapp;
 
 import android.app.Activity;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -16,13 +15,12 @@ public class FullscreenWebPlayer extends Activity {
     ViewGroup parent;
     WebView player;
 
-    @Override
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.active = true;
         fullScreenAct = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fullscreen_web_player);
-        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
 
         LinearLayout ll = (LinearLayout) findViewById(R.id.layout_fullscreen);
         player = WebPlayer.getPlayer();

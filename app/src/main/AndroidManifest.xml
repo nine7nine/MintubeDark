@@ -96,10 +96,6 @@
             android:name=".PlayerService"
             android:exported="true" />
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="Fabric_API_KEY" />
-
     </application>
 
 </manifest>
