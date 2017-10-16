@@ -7,6 +7,7 @@
     android:alpha="0.9">
 
     <ImageView
+        android:contentDescription="@string/notification_thumbnail"
         android:id="@+id/thumbnail"
         android:layout_width="0dp"
         android:layout_height="120dp"
@@ -39,6 +40,7 @@
                 android:textColor="#fff"/>
 
             <ImageView
+                android:contentDescription="@string/stop_service"
                 android:id="@+id/stop_service"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -61,18 +63,21 @@
             android:orientation="horizontal"
             android:weightSum="3">
             <ImageView
+                android:contentDescription="@string/previous_video"
                 android:id="@+id/previous_video"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_skip_previous"
                 android:layout_weight="1"/>
             <ImageView
+                android:contentDescription="@string/pause_play_video"
                 android:id="@+id/pause_play_video"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_pause"
                 android:layout_weight="1"/>
             <ImageView
+                android:contentDescription="@string/next_video"
                 android:id="@+id/next_video"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

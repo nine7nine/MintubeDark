@@ -32,18 +32,21 @@
         android:weightSum="3"
         android:alpha="0.9">
         <ImageView
+            android:contentDescription="@string/pause_play_video"
             android:id="@+id/pause_play_video"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_pause"
             android:layout_weight="1"/>
         <ImageView
+            android:contentDescription="@string/next_video"
             android:id="@+id/next_video"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_skip_next"
             android:layout_weight="1"/>
         <ImageView
+            android:contentDescription="@string/stop_service"
             android:id="@+id/stop_service"
             android:layout_width="0dp"
             android:layout_height="match_parent"

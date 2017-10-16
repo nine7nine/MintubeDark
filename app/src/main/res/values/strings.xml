@@ -25,6 +25,12 @@
     <string name="videoQuality">VIDEO_QUALITY</string>
     <string name="finishOnEnd">FINISH_ON_END</string>
     <string name="title_activity_search">SearchActivity</string>
+    <string name="count">COUNT</string>
     <string name="entire_width" />
     <string name="fullscreen" />
+    <string name="next_video" />
+    <string name="pause_play_video" />
+    <string name="previous_video" />
+    <string name="stop_service" />
+    <string name="notification_thumbnail" />
 </resources>
