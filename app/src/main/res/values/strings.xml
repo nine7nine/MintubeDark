@@ -33,4 +33,6 @@
     <string name="previous_video" />
     <string name="stop_service" />
     <string name="notification_thumbnail" />
+    <string name="launcher" />
+    <string name="put_in_search_box" />
 </resources>

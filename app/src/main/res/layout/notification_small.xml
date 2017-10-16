@@ -8,6 +8,7 @@
     android:alpha="0.9">
 
     <ImageView
+        android:contentDescription="@string/notification_thumbnail"
         android:id="@+id/thumbnail"
         android:layout_width="0dp"
         android:layout_height="match_parent"

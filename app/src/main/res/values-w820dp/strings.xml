@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="entire_width" />
+    <string name="fullscreen" />
+    <string name="next_video" />
+    <string name="pause_play_video" />
+    <string name="previous_video" />
+    <string name="stop_service" />
+    <string name="notification_thumbnail" />
+    <string name="launcher" />
+    <string name="put_in_search_box" />
 </resources>
