@@ -159,7 +159,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
                 @Override
                 public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         if (String.valueOf(request.getUrl()).contains("http://m.youtube.com/watch?") ||
                                 String.valueOf(request.getUrl()).contains("https://m.youtube.com/watch?")) {
                             String url = String.valueOf(request.getUrl());
@@ -218,7 +217,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                                 }
                             });
                         }
-                    }
                     return super.shouldInterceptRequest(view, request);
                 }
             });
