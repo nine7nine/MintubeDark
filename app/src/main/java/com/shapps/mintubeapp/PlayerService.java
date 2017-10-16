@@ -338,6 +338,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                 .setAutoCancel(false);
 
         notification = builder.build();
+        notification.bigContentView = viewBig;
 
         //Set Image and Headings
         setImageTitleAuthor(VID_ID);

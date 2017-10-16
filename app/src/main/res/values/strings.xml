@@ -33,6 +33,13 @@
     <string name="previous_video" />
     <string name="stop_service" />
     <string name="notification_thumbnail" />
+    <string name="entire_width_large" />
+    <string name="fullscreen_large" />
+    <string name="next_video_large" />
+    <string name="pause_play_video_large" />
+    <string name="previous_video_large" />
+    <string name="stop_service_large" />
+    <string name="notification_thumbnail_large" />
     <string name="launcher" />
     <string name="put_in_search_box" />
 </resources>
