@@ -57,7 +57,7 @@ public class WebPlayer {
         player.destroy();
     }
 
-    public void loadDataWithUrl(String baseUrl, String videoHTML, String mimeType, String encoding, String historyUrl) {
-        player.loadDataWithBaseURL(baseUrl, videoHTML, mimeType, encoding, historyUrl);
+    public void loadDataWithUrl(String videoHTML) {
+        player.loadDataWithBaseURL("https://www.youtube.com/player_api", videoHTML, "text/html", null, null);
     }
 }

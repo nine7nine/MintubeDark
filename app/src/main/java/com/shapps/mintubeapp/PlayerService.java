@@ -413,14 +413,14 @@ public class PlayerService extends Service implements View.OnClickListener{
         if(Constants.linkType == 1) {
             Log.d("Starting ", "Playlist!!!");
             ConstantStrings.setPList(PLIST_ID);
-            webPlayer.loadDataWithUrl("https://www.youtube.com/player_api",ConstantStrings.getPlayListHTML(),
-                    "text/html", null, null);
+            webPlayer.loadDataWithUrl(ConstantStrings.getPlayListHTML()
+            );
         }
         else {
             ConstantStrings.setVid(VID_ID);
             Log.d("Starting ", "Single Video!!!");
-            webPlayer.loadDataWithUrl("https://www.youtube.com/player_api",ConstantStrings.getVideoHTML(),
-                    "text/html", null, null);
+            webPlayer.loadDataWithUrl(ConstantStrings.getVideoHTML()
+            );
         }
 
         param_player.gravity = Gravity.TOP | Gravity.LEFT;
