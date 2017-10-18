@@ -36,8 +36,8 @@ public class Constants {
     public static boolean finishOnEnd = false;
 
 
-    private static String strPlaybackQuality = "large";
     public static String getPlaybackQuality() {
+        String strPlaybackQuality = "large";
         if(playbackQuality == 0){
             strPlaybackQuality = "auto";
         }

@@ -16,7 +16,7 @@ public class FullscreenWebPlayer extends Activity {
     ViewGroup parent;
     WebView player;
 
-     @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.active = true;
         fullScreenAct = this;
