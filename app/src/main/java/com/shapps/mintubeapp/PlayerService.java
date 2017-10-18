@@ -405,7 +405,8 @@ public class PlayerService extends Service implements View.OnClickListener{
         viewToHide.addView(webPlayer.getPlayer(), parWebView);
 
         //------------------------------Got Player Id--------------------------------------------------------
-        Map hashMap = new HashMap();
+        //noinspection MismatchedQueryAndUpdateOfCollection
+        Map<String, String> hashMap = new HashMap<>();
         hashMap.put("Referer", "http://www.youtube.com");
         if(Constants.linkType == 1) {
             Log.d("Starting ", "Playlist!!!");
