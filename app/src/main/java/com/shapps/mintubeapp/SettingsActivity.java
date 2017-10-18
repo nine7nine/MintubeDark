@@ -57,7 +57,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         stopNotPlaying.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked == true || isChecked == false) {
+                if (isChecked || !isChecked) {
                     Constants.finishOnEnd = isChecked;
                     SharedPreferences.Editor editor = sharedPref.edit();
                     editor.putBoolean(getString(R.string.finishOnEnd), isChecked);

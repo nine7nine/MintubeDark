@@ -147,7 +147,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                     webPlayer.loadScript(JavaScript.playVideoScript());
                 }
                 else {
-                    if(Constants.finishOnEnd == true){
+                    if(Constants.finishOnEnd){
                         playerService.destroyServiceOnFinish();
                     }
                     else {
@@ -708,12 +708,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         closeMinX = t[0] - 10;
         closeMinY = t[1] - getStatusBarHeight() - 10;
         closeMaxX = closeMinX + closeImageLayoutSize + 10;
-        if(isInsideClose()){
-            isInsideClose = true;
-        }
-        else {
-            isInsideClose = false;
-        }
+        isInsideClose = isInsideClose();
     }
     public boolean isInsideClose() {
         if(playerHeadCenterX >= closeMinX && playerHeadCenterX <= closeMaxX){
