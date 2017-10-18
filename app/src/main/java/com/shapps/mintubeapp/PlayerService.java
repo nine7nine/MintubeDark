@@ -45,6 +45,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
+import static com.shapps.mintubeapp.WebPlayer.*;
+
 /**
  * Created by shyam on 12/2/16.
  */
@@ -99,7 +101,7 @@ public class PlayerService extends Service implements View.OnClickListener{
             Log.d("Status", "Buffering");
             String quality = Constants.getPlaybackQuality();
             Log.d("Quality", quality);
-            webPlayer.loadScript(JavaScript.resetPlaybackQuality(quality));
+            loadScript(JavaScript.resetPlaybackQuality(quality));
         }
         if(playingStatus == 1){
             isVideoPlaying = true;
@@ -108,17 +110,17 @@ public class PlayerService extends Service implements View.OnClickListener{
             notificationManager.notify(Constants.NOTIFICATION_ID.FOREGROUND_SERVICE, notification);
             if(nextVid){
                 nextVid = false;
-                webPlayer.loadScript(JavaScript.getVidUpdateNotiContent());
+                loadScript(JavaScript.getVidUpdateNotiContent());
             }
             if(VID_ID.length() < 1){
                 Log.d("If lenght", "Less that 1");
-                webPlayer.loadScript(JavaScript.getVidUpdateNotiContent());
+                loadScript(JavaScript.getVidUpdateNotiContent());
             }
 
             //Also Update if playlist is set for loop
             if(Constants.linkType == 1 && Constants.repeatType == 1 && !isLoopSetPlayList){
                 Log.d("Setting ", "Playlist on Loop");
-                webPlayer.loadScript(JavaScript.setLoopPlaylist());
+                loadScript(JavaScript.setLoopPlaylist());
                 isLoopSetPlayList = true;
             }
         }
@@ -132,7 +134,7 @@ public class PlayerService extends Service implements View.OnClickListener{
             if(Constants.linkType == 1) {
                 Log.d("Repeat Type ", Constants.repeatType + "");
                 if(Constants.repeatType == 2){
-                    webPlayer.loadScript(JavaScript.prevVideo());
+                    loadScript(JavaScript.prevVideo());
                 }
                 //If not repeating then set notification icon to repeat when playlist ends
                 if(Constants.repeatType == 0){
@@ -141,7 +143,7 @@ public class PlayerService extends Service implements View.OnClickListener{
             }
             else {
                 if(Constants.repeatType > 0){
-                    webPlayer.loadScript(JavaScript.playVideoScript());
+                    loadScript(JavaScript.playVideoScript());
                 }
                 else {
                     if(Constants.finishOnEnd){
@@ -166,7 +168,7 @@ public class PlayerService extends Service implements View.OnClickListener{
     }
 
     private static void isPlaylistEnded() {
-        webPlayer.loadScript(JavaScript.isPlaylistEnded());
+        loadScript(JavaScript.isPlaylistEnded());
     }
 
     public static void setNoItemsInPlaylist(int noItemsInPlaylist) {
@@ -209,7 +211,7 @@ public class PlayerService extends Service implements View.OnClickListener{
     @Override
     public int onStartCommand(Intent intent, int flags, int startId){
 
-        this.playerService = this;
+        playerService = this;
         if(intent.getAction().equals(Constants.ACTION.STARTFOREGROUND_WEB_ACTION)) {
             Log.d("Service ", "Started!");
             sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -227,39 +229,39 @@ public class PlayerService extends Service implements View.OnClickListener{
                 if (replayVid || replayPlaylist) {
                     if (Constants.linkType == 1) {
                         Log.i("Trying to ", "Replay Playlist");
-                        webPlayer.loadScript(JavaScript.replayPlaylistScript());
+                        loadScript(JavaScript.replayPlaylistScript());
                         replayPlaylist = false;
                     } else {
                         Log.i("Trying to ", "Replay Video");
-                        webPlayer.loadScript(JavaScript.playVideoScript());
+                        loadScript(JavaScript.playVideoScript());
                         replayVid = false;
                     }
                 } else {
                     Log.i("Trying to ", "Pause Video");
-                    webPlayer.loadScript(JavaScript.pauseVideoScript());
+                    loadScript(JavaScript.pauseVideoScript());
                 }
             } else {
                 Log.i("Trying to ", "Play Video");
-                webPlayer.loadScript(JavaScript.playVideoScript());
+                loadScript(JavaScript.playVideoScript());
             }
         }
         else if(intent.getAction().equals(Constants.ACTION.NEXT_ACTION)){
             Log.d("Trying to ", "Play Next");
             if(Constants.linkType == 0){
-                webPlayer.loadScript(JavaScript.seekToZero());
+                loadScript(JavaScript.seekToZero());
             }
             else {
-                webPlayer.loadScript(JavaScript.nextVideo());
+                loadScript(JavaScript.nextVideo());
                 nextVid = true;
             }
         }
         else if(intent.getAction().equals(Constants.ACTION.PREV_ACTION)){
             Log.d("Trying to ", "Play Previous");
             if(Constants.linkType == 0){
-                webPlayer.loadScript(JavaScript.seekToZero());
+                loadScript(JavaScript.seekToZero());
             }
             else {
-                webPlayer.loadScript(JavaScript.prevVideo());
+                loadScript(JavaScript.prevVideo());
                 nextVid = true;
             }
         }
@@ -288,11 +290,11 @@ public class PlayerService extends Service implements View.OnClickListener{
         PlayerService.PLIST_ID = pId;
         if(pId == null) {
             setImageTitleAuthor(vId);
-            webPlayer.loadScript(JavaScript.loadVideoScript(vId));
+            loadScript(JavaScript.loadVideoScript(vId));
         }
         else{
             Log.d("Starting ", "Playlist.");
-            webPlayer.loadScript(JavaScript.loadPlaylistScript(pId));
+            loadScript(JavaScript.loadPlaylistScript(pId));
             setImageTitleAuthor(vId);
         }
     }
@@ -322,7 +324,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         Intent doThings = new Intent(this, PlayerService.class);
 
         //Notification
-        notificationManager = (NotificationManager) getSystemService(this.NOTIFICATION_SERVICE);
+        notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
 
                 .setSmallIcon(R.drawable.ic_status_bar)
@@ -402,7 +404,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         webPlayer = new WebPlayer(this);
         webPlayer.setupPlayer();
 
-        viewToHide.addView(webPlayer.getPlayer(), parWebView);
+        viewToHide.addView(getPlayer(), parWebView);
 
         //------------------------------Got Player Id--------------------------------------------------------
         //noinspection MismatchedQueryAndUpdateOfCollection
@@ -696,7 +698,7 @@ public class PlayerService extends Service implements View.OnClickListener{
     }
 
     public static void addStateChangeListener() {
-        webPlayer.loadScript(JavaScript.onPlayerStateChangeListener());
+        loadScript(JavaScript.onPlayerStateChangeListener());
     }
     private void updateIsInsideClose(int x, int y, int[] t) {
         playerHeadCenterX = x + playerHeadSize / 2 ;
@@ -724,7 +726,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         windowManager.addView(serviceClose, servCloseParams);
         windowManager.addView(serviceCloseBackground, servCloseBackParams);
         windowManager.addView(playerView, playerViewParams);
-        webPlayer.loadScript(JavaScript.playVideoScript());
+        loadScript(JavaScript.playVideoScript());
     }
 
 
@@ -745,7 +747,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                 break;
             //Handle Full Screen
             case R.id.fullscreen:
-                webPlayer.loadScript(JavaScript.pauseVideoScript());
+                loadScript(JavaScript.pauseVideoScript());
                 Intent fullScreenIntent = new Intent(getAppContext(), FullscreenWebPlayer.class);
                 fullScreenIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 //remove Views
@@ -763,7 +765,7 @@ public class PlayerService extends Service implements View.OnClickListener{
             //Handle Entire Width
             case R.id.entire_width:
                 //Enter Entire Width
-                if(WebPlayer.getPlayer().getMeasuredWidth() != scrnWidth) {
+                if(getPlayer().getMeasuredWidth() != scrnWidth) {
                     param_player.width = WindowManager.LayoutParams.MATCH_PARENT;
                     windowManager.updateViewLayout(playerView, param_player);
                     ViewGroup.LayoutParams fillWidthParamLL = webPlayerLL.getLayoutParams();
@@ -775,9 +777,9 @@ public class PlayerService extends Service implements View.OnClickListener{
                     ViewGroup.LayoutParams fillWidthParam = viewToHide.getLayoutParams();
                     fillWidthParam.width = WindowManager.LayoutParams.MATCH_PARENT;
                     viewToHide.setLayoutParams(fillWidthParam);
-                    ViewGroup.LayoutParams playerEntireWidPar = WebPlayer.getPlayer().getLayoutParams();
+                    ViewGroup.LayoutParams playerEntireWidPar = getPlayer().getLayoutParams();
                     playerEntireWidPar.width = WindowManager.LayoutParams.MATCH_PARENT;
-                    viewToHide.updateViewLayout(WebPlayer.getPlayer(), playerEntireWidPar);
+                    viewToHide.updateViewLayout(getPlayer(), playerEntireWidPar);
                     entireWidthImg.setImageDrawable(getResources().getDrawable(R.drawable.ic_entire_width_exit));
                     isEntireWidth = true;
                 }
@@ -794,9 +796,9 @@ public class PlayerService extends Service implements View.OnClickListener{
                     ViewGroup.LayoutParams fillWidthParam = viewToHide.getLayoutParams();
                     fillWidthParam.width = defaultPlayerWidth;
                     viewToHide.setLayoutParams(fillWidthParam);
-                    ViewGroup.LayoutParams playerEntireWidPar = WebPlayer.getPlayer().getLayoutParams();
+                    ViewGroup.LayoutParams playerEntireWidPar = getPlayer().getLayoutParams();
                     playerEntireWidPar.width = defaultPlayerWidth;
-                    viewToHide.updateViewLayout(WebPlayer.getPlayer(), playerEntireWidPar);
+                    viewToHide.updateViewLayout(getPlayer(), playerEntireWidPar);
                     entireWidthImg.setImageDrawable(getResources().getDrawable(R.drawable.ic_entire_width));
                     isEntireWidth = false;
                 }
@@ -809,7 +811,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                     editor.apply();
                     Constants.repeatType = 1;
                     if (Constants.linkType == 1) {
-                        webPlayer.loadScript(JavaScript.setLoopPlaylist());
+                        loadScript(JavaScript.setLoopPlaylist());
                     }
                     updateRepeatTypeImage();
                 } else if (Constants.repeatType == 1) {
@@ -817,7 +819,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                     editor.apply();
                     Constants.repeatType = 2;
                     if (Constants.linkType == 1) {
-                        webPlayer.loadScript(JavaScript.unsetLoopPlaylist());
+                        loadScript(JavaScript.unsetLoopPlaylist());
                     }
                     updateRepeatTypeImage();
                 } else if (Constants.repeatType == 2) {
@@ -825,7 +827,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                     editor.apply();
                     Constants.repeatType = 0;
                     if (Constants.linkType == 1) {
-                        webPlayer.loadScript(JavaScript.unsetLoopPlaylist());
+                        loadScript(JavaScript.unsetLoopPlaylist());
                     }
                     updateRepeatTypeImage();
                 }

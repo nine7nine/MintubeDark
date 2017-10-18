@@ -16,7 +16,7 @@ class JavaScriptInterface {
     static Context context;
     static Handler handlerForJavascriptInterface = new Handler();
     public JavaScriptInterface(PlayerService playerService) {
-        this.context = playerService;
+        context = playerService;
     }
 
     @JavascriptInterface

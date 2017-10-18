@@ -10,6 +10,8 @@ import android.webkit.WebViewClient;
 
 import java.util.Map;
 
+import static android.webkit.WebView.*;
+
 /**
  * Created by shyam on 15/3/16.
  */
@@ -19,7 +21,7 @@ class WebPlayer {
     private Context context;
 
     public WebPlayer(Context context) {
-        this.player = new WebView(context);
+        player = new WebView(context);
         this.context = context;
     }
 
@@ -28,7 +30,7 @@ class WebPlayer {
 
 
 //         For debugging using chrome on PC
-        player.setWebContentsDebuggingEnabled(false);
+        setWebContentsDebuggingEnabled(false);
 
         player.setWebChromeClient(new WebChromeClient());
         player.getSettings().setMediaPlaybackRequiresUserGesture(false);

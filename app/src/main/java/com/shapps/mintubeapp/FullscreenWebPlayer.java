@@ -18,7 +18,7 @@ public class FullscreenWebPlayer extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        this.active = true;
+        active = true;
         fullScreenAct = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fullscreen_web_player);
