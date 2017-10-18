@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_width="wrap_content"
-    android:layout_height="150dp">
+    android:layout_width="0dp"
+    android:layout_height="0dp">
 
     <RelativeLayout
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:id="@+id/close_image_layout"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:gravity="center">
         <com.shapps.mintubeapp.CustomViews.CircularImageView
             android:id="@+id/close_image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:civ_border_width="2dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:civ_border_width="0dp"
             android:src="@drawable/ic_close"
             app:civ_border_color="#fff"/>
     </RelativeLayout>

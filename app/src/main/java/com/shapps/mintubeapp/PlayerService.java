@@ -59,7 +59,7 @@ public class PlayerService extends Service implements View.OnClickListener{
     private FrameLayout webPlayerFrame;
     private static WindowManager.LayoutParams servHeadParams, servCloseParams, servCloseBackParams, playerViewParams;
     private WindowManager.LayoutParams param_player, params, param_close, param_close_back, parWebView;
-    private RelativeLayout viewToHide, closeImageLayout;
+    private RelativeLayout viewToHide;
     private static WebPlayer webPlayer;
     private static String VID_ID = "";
     private static String PLIST_ID = "";
@@ -70,8 +70,8 @@ public class PlayerService extends Service implements View.OnClickListener{
     private static NotificationManager notificationManager;
     private static Notification notification;
     private static ImageView playerHeadImage;
-    private int playerHeadCenterX, playerHeadCenterY, closeMinX, closeMinY, closeMaxX, closeImgSize;
-    private int scrnWidth, scrnHeight, defaultPlayerWidth,playerWidth, playerHeight, playerHeadSize, closeImageLayoutSize, xAtHiding, yAtHiding, xOnAppear, yOnAppear = 0;
+    private int playerHeadCenterX, playerHeadCenterY, closeMinX, closeMinY, closeMaxX;
+    private int scrnWidth, scrnHeight, defaultPlayerWidth,playerWidth, playerHeight, playerHeadSize, xAtHiding, yAtHiding, xOnAppear, yOnAppear = 0;
 
     //is inside the close button so to stop video
     private boolean isInsideClose = false;
@@ -485,16 +485,6 @@ public class PlayerService extends Service implements View.OnClickListener{
         param_close.gravity = Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM;
         serviceClose.setVisibility(View.GONE);
         windowManager.addView(serviceClose, param_close);
-        closeImageLayout = (RelativeLayout) serviceClose.findViewById(R.id.close_image_layout);
-        vto = closeImageLayout.getViewTreeObserver();
-        vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                closeImageLayout.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-                closeImageLayoutSize = closeImageLayout.getMeasuredHeight();
-                Log.d("Close Image Size ", String.valueOf(closeImageLayoutSize));
-            }
-        });
 
         final CircularImageView closeImage = (CircularImageView) serviceClose.findViewById(R.id.close_image);
 
@@ -546,7 +536,6 @@ public class PlayerService extends Service implements View.OnClickListener{
                         initialTouchY = event.getRawY();
                         needToShow[0] = true;
                         handleLongTouch.postDelayed(setVisible, 100);
-                        closeImgSize = closeImage.getLayoutParams().width;
                         return true;
                     case MotionEvent.ACTION_UP:
                         finalTouchX = event.getRawX();
@@ -618,28 +607,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                             }
                             params.x = newX;
                             int [] t = new int[2];
-                            closeImageLayout.getLocationOnScreen(t);
-                            updateIsInsideClose(params.x, params.y, t);
-                            if(isInsideClose){
-                                params.x = t[0];
-                                params.y = t[1] - getStatusBarHeight();
-                                params.width = closeImageLayoutSize;
-                                params.height = closeImageLayoutSize;
-                                if(closeImage.getLayoutParams().width == closeImgSize){
-                                    closeImage.getLayoutParams().width = closeImgSize * 2;
-                                    closeImage.getLayoutParams().height = closeImgSize * 2;
-                                    closeImage.requestLayout();
-                                }
-                            }
-                            else{
-                                params.width = playerHeadSize;
-                                params.height = playerHeadSize;
-                                if(closeImage.getLayoutParams().width > closeImgSize){
-                                    closeImage.getLayoutParams().width = closeImgSize;
-                                    closeImage.getLayoutParams().height = closeImgSize;
-                                    closeImage.requestLayout();
-                                }
-                            }
+
                             windowManager.updateViewLayout(serviceHead, params);
                         }
                         return true;
@@ -699,14 +667,6 @@ public class PlayerService extends Service implements View.OnClickListener{
 
     public static void addStateChangeListener() {
         loadScript(JavaScript.onPlayerStateChangeListener());
-    }
-    private void updateIsInsideClose(int x, int y, int[] t) {
-        playerHeadCenterX = x + playerHeadSize / 2 ;
-        playerHeadCenterY = y + playerHeadSize / 2;
-        closeMinX = t[0] - 10;
-        closeMinY = t[1] - getStatusBarHeight() - 10;
-        closeMaxX = closeMinX + closeImageLayoutSize + 10;
-        isInsideClose = isInsideClose();
     }
     private boolean isInsideClose() {
         if(playerHeadCenterX >= closeMinX && playerHeadCenterX <= closeMaxX){
