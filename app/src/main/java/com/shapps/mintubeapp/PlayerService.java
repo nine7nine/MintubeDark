@@ -652,10 +652,7 @@ public class PlayerService extends Service implements View.OnClickListener{
             private boolean isClicked(float startX, float endX, float startY, float endY) {
                 float differenceX = Math.abs(startX - endX);
                 float differenceY = Math.abs(startY - endY);
-                if (differenceX >= 5 || differenceY >= 5) {
-                    return false;
-                }
-                return true;
+                return !(differenceX >= 5 || differenceY >= 5);
             }
         });
     }
