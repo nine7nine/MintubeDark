@@ -573,9 +573,6 @@ public class PlayerService extends Service implements View.OnClickListener{
                             if (newX < 0) {
                                 param_player.x = 0;
                                 params.x = 0;
-                            } else if (playerWidth + newX > scrnWidth) {
-                                param_player.x = scrnWidth - playerWidth;
-                                params.x = scrnWidth - playerWidth;
                             }
                             else {
                                 param_player.x = newX;
