@@ -3,10 +3,10 @@ package com.shapps.mintubeapp;
 /**
  * Created by shyam on 14/4/16.
  */
-public class ConstantStrings {
+class ConstantStrings {
 
-    public  static String VID = "";
-    public static String PLIST = "";
+    private static String VID = "";
+    private static String PLIST = "";
 
     public static void setVid(String vid) {
         ConstantStrings.VID = vid;

@@ -58,22 +58,22 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
-    Activity mainAct;
-    WebView youtubeView;
-    String currUrl;
-    boolean doubleClickToExit = false;
+    private Activity mainAct;
+    private WebView youtubeView;
+    private String currUrl;
+    private boolean doubleClickToExit = false;
     //For Result Activity
-    public static int OVERLAY_PERMISSION_REQ = 1234;
-    String VID, PID;
+    private static int OVERLAY_PERMISSION_REQ = 1234;
+    private String VID, PID;
     //SearchView
-    SearchView searchView;
+    private SearchView searchView;
     //Swipe Refresh
-    CustomSwipeRefresh swipeRefreshLayout;
-    boolean exit = false;
+    private CustomSwipeRefresh swipeRefreshLayout;
+    private boolean exit = false;
 
-    Button retry, changeSettings, exitApp;
+    private Button retry, changeSettings, exitApp;
 
-    ViewStub viewStub;
+    private ViewStub viewStub;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,6 +132,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
                     currUrl = str;
                 }
+
 
                 @Override
                 public void onPageFinished(WebView view, String str) {
@@ -371,7 +372,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         }
     }
 
-    public static boolean isInternetAvailable(Context context) {
+    private static boolean isInternetAvailable(Context context) {
         NetworkInfo info;
         info = ((ConnectivityManager)
                 context.getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();

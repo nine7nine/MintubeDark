@@ -13,8 +13,8 @@ public class FullscreenWebPlayer extends Activity {
     static boolean active = false;
     static Activity fullScreenAct;
 
-    ViewGroup parent;
-    WebView player;
+    private ViewGroup parent;
+    private WebView player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -5,7 +5,7 @@ import android.util.Log;
 /**
  * Created by shyam on 2/2/16.
  */
-public class Session{
+class Session{
 
 //    private static YouTubePlayerView youTubePlayerView;
 

@@ -3,7 +3,7 @@ package com.shapps.mintubeapp;
 /**
  * Created by shyam on 16/2/16.
  */
-public class Constants {
+class Constants {
 
     //Type of player
     //WebView player = 0

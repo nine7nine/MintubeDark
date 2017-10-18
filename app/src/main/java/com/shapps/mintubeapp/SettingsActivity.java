@@ -23,12 +23,12 @@ import android.widget.TextView;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener{
 
-    LinearLayout videoQuality, playerType, about;
-    Button increaseCount, decreaseCount;
-    CheckBox fullscreenOnRotate, stopNotPlaying;
-    CoordinatorLayout coordinatorLayout;
-    TextView quality;
-    SharedPreferences sharedPref;
+    private LinearLayout videoQuality, playerType, about;
+    private Button increaseCount, decreaseCount;
+    private CheckBox fullscreenOnRotate, stopNotPlaying;
+    private CoordinatorLayout coordinatorLayout;
+    private TextView quality;
+    private SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

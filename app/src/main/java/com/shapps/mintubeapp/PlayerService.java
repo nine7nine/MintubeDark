@@ -50,49 +50,49 @@ import java.util.concurrent.ExecutionException;
  */
 public class PlayerService extends Service implements View.OnClickListener{
 
-    static Context mContext;
-    static Bitmap bitmap;
-    static String title, author;
-    static PlayerService playerService;
-    static WindowManager windowManager;
-    static LinearLayout serviceHead, serviceClose, serviceCloseBackground, playerView, webPlayerLL;
-    FrameLayout webPlayerFrame;
-    static  WindowManager.LayoutParams servHeadParams, servCloseParams, servCloseBackParams, playerViewParams;
-    WindowManager.LayoutParams param_player, params, param_close, param_close_back, parWebView;
-    RelativeLayout viewToHide, closeImageLayout;
-    static WebPlayer webPlayer;
-    static String VID_ID = "";
-    static String PLIST_ID = "";
-    static boolean isVideoPlaying = true;
-    boolean visible = true;
-    static RemoteViews viewBig;
-    static RemoteViews viewSmall;
-    static NotificationManager notificationManager;
-    static Notification notification;
-    static ImageView playerHeadImage;
-    int playerHeadCenterX, playerHeadCenterY, closeMinX, closeMinY, closeMaxX, closeImgSize;
-    int scrnWidth, scrnHeight, defaultPlayerWidth,playerWidth, playerHeight, playerHeadSize, closeImageLayoutSize, xAtHiding, yAtHiding, xOnAppear, yOnAppear = 0;
+    private static Context mContext;
+    private static Bitmap bitmap;
+    private static String title, author;
+    private static PlayerService playerService;
+    private static WindowManager windowManager;
+    private static LinearLayout serviceHead, serviceClose, serviceCloseBackground, playerView, webPlayerLL;
+    private FrameLayout webPlayerFrame;
+    private static WindowManager.LayoutParams servHeadParams, servCloseParams, servCloseBackParams, playerViewParams;
+    private WindowManager.LayoutParams param_player, params, param_close, param_close_back, parWebView;
+    private RelativeLayout viewToHide, closeImageLayout;
+    private static WebPlayer webPlayer;
+    private static String VID_ID = "";
+    private static String PLIST_ID = "";
+    private static boolean isVideoPlaying = true;
+    private boolean visible = true;
+    private static RemoteViews viewBig;
+    private static RemoteViews viewSmall;
+    private static NotificationManager notificationManager;
+    private static Notification notification;
+    private static ImageView playerHeadImage;
+    private int playerHeadCenterX, playerHeadCenterY, closeMinX, closeMinY, closeMaxX, closeImgSize;
+    private int scrnWidth, scrnHeight, defaultPlayerWidth,playerWidth, playerHeight, playerHeadSize, closeImageLayoutSize, xAtHiding, yAtHiding, xOnAppear, yOnAppear = 0;
 
-    static Intent fullScreenIntent;
+    private static Intent fullScreenIntent;
 
     //is inside the close button so to stop video
-    boolean isInsideClose = false;
+    private boolean isInsideClose = false;
     //is width entire to show video properly
-    boolean isEntireWidth = false;
+    private boolean isEntireWidth = false;
     //Next Video to check whether next video is played or not
-    static boolean nextVid = false;
+    private static boolean nextVid = false;
     //Replay Video if it's ended
-    static boolean replayVid = false;
-    static boolean replayPlaylist = false;
+    private static boolean replayVid = false;
+    private static boolean replayPlaylist = false;
 
-    ImageView repeatTypeImg, entireWidthImg, fullScreenImg;
-    SharedPreferences sharedPref;
+    private ImageView repeatTypeImg, entireWidthImg, fullScreenImg;
+    private SharedPreferences sharedPref;
     private static int noItemsInPlaylist, currVideoIndex;
 
     //Loop for Playlist
-    static boolean isLoopSetPlayList = false;
+    private static boolean isLoopSetPlayList = false;
     //Don't Update head's Position and Hide icons and dropDown Image
-    boolean updateHead = true;
+    private boolean updateHead = true;
 
     public static void setPlayingStatus(int playingStatus) {
         if(playingStatus == -1){
@@ -168,7 +168,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         stopService(new Intent(mContext, PlayerService.class));
     }
 
-    public static void isPlaylistEnded() {
+    private static void isPlaylistEnded() {
         webPlayer.loadScript(JavaScript.isPlaylistEnded());
     }
 
@@ -180,7 +180,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         PlayerService.currVideoIndex = currVideoIndex;
     }
 
-    public static Context getAppContext(){
+    private static Context getAppContext(){
         return mContext;
     }
 
@@ -708,7 +708,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         closeMaxX = closeMinX + closeImageLayoutSize + 10;
         isInsideClose = isInsideClose();
     }
-    public boolean isInsideClose() {
+    private boolean isInsideClose() {
         if(playerHeadCenterX >= closeMinX && playerHeadCenterX <= closeMaxX){
             if(playerHeadCenterY >= closeMinY){
                 return true;

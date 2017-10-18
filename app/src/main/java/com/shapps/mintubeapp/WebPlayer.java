@@ -13,10 +13,10 @@ import java.util.Map;
 /**
  * Created by shyam on 15/3/16.
  */
-public class WebPlayer {
+class WebPlayer {
 
-    static WebView player;
-    Context context;
+    private static WebView player;
+    private Context context;
 
     public WebPlayer(Context context) {
         this.player = new WebView(context);

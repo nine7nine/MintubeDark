@@ -3,7 +3,7 @@ package com.shapps.mintubeapp;
 /**
  * Created by shyam on 19/2/16.
  */
-public class JavaScript {
+class JavaScript {
 
     public static String loadVideoScript(String vId){
         return "javascript:player.loadVideoById(\"" + vId + "\");";

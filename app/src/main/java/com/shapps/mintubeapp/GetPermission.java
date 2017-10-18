@@ -17,10 +17,10 @@ import android.widget.Button;
  */
 public class GetPermission extends AppCompatActivity {
 
-    public static int OVERLAY_PERMISSION_REQ_CODE = 12345;
-    public static int OVERLAY_PERMISSION_REQ_BACKTO_ACT_CODE = 23456;
-    String vId, pId;
-    int permissionCode;
+    private static int OVERLAY_PERMISSION_REQ_CODE = 12345;
+    private static int OVERLAY_PERMISSION_REQ_BACKTO_ACT_CODE = 23456;
+    private String vId, pId;
+    private int permissionCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

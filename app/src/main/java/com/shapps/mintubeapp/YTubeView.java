@@ -17,12 +17,12 @@ import java.util.regex.Pattern;
 public class YTubeView extends Activity{//extends YouTubeFailureRecoveryActivity {
 
     //    YouTubePlayerView youTubeView;
-    String vId, pId;
+    private String vId, pId;
 
     //For Result Activity
-    public static int OVERLAY_PERMISSION_REQ = 1234;
-    public static int OVERLAY_PERMISSION_REQ_BACKTO_ACT = 2345;
-    static SharedPreferences sharedPref;
+    private static int OVERLAY_PERMISSION_REQ = 1234;
+    private static int OVERLAY_PERMISSION_REQ_BACKTO_ACT = 2345;
+    private static SharedPreferences sharedPref;
 
 
     @Override
