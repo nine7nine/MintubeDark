@@ -596,11 +596,9 @@ public class PlayerService extends Service implements View.OnClickListener{
                                 param_player.y = playerHeadSize;
                                 params.y = 0;
                             } else if (playerHeight + newY + playerHeadSize > scrnHeight) {
-                                if(visible){
-                                    //Continue with the drag and don't update head params
-                                    updateHead = false;
-                                    hidePlayer();
-                                }
+                                //Continue with the drag and don't update head params
+                                updateHead = false;
+                                hidePlayer();
                                 params.y = newY;
                             } else {
                                 param_player.y = newY + playerHeadSize;
