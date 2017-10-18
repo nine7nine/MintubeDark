@@ -719,8 +719,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         return false;
     }
     private int getStatusBarHeight() {
-        int statusBarHeight = (int) Math.ceil(25 * getApplicationContext().getResources().getDisplayMetrics().density);
-        return statusBarHeight;
+        return (int) Math.ceil(25 * getApplicationContext().getResources().getDisplayMetrics().density);
     }
 
     //Play video again on exit full screen
