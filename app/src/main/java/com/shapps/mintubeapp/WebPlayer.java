@@ -26,6 +26,13 @@ class WebPlayer {
     public void setupPlayer() {
         player.getSettings().setJavaScriptEnabled(true);
 
+
+//         For debugging using chrome on PC
+        player.setWebContentsDebuggingEnabled(false);
+
+        player.setWebChromeClient(new WebChromeClient());
+        player.getSettings().setMediaPlaybackRequiresUserGesture(false);
+
         player.getSettings().setUserAgentString("Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:21.0.0) Gecko/20121011 Firefox/21.0.0");
 
         //----------------------------To get Player Id-------------------------------------------
