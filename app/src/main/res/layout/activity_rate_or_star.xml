@@ -16,7 +16,7 @@
         android:backgroundTint="#737373"
         android:textColor="#fff"
         android:layout_alignTop="@+id/rate_on_playstore"
-        android:layout_toRightOf="@+id/rate_on_playstore" />
+        android:layout_toEndOf="@+id/rate_on_playstore" />
 
     <Button
         android:layout_marginTop="10dp"
@@ -28,7 +28,7 @@
         android:textColor="#fff"
         android:text="Rate on Play Store"
         android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_marginTop="20dp"
@@ -38,7 +38,7 @@
         android:text="Like the App ?"
         android:textSize="20sp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/issue"
@@ -50,7 +50,7 @@
         android:textColor="#fff"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/textView1"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/textView1"
@@ -60,7 +60,7 @@
         android:textSize="20sp"
         android:layout_below="@+id/star_on_GitHub"
         android:layout_marginTop="20dp"
-        android:layout_alignParentLeft="true"/>
+        android:layout_alignParentStart="true"/>
 
 
     <Button
@@ -73,7 +73,6 @@
         android:textColor="#fff"
         android:textAllCaps="false"
         android:layout_below="@+id/issue"
-        android:layout_toLeftOf="@+id/never"
         android:layout_toStartOf="@+id/never" />
 
     <Button
@@ -85,6 +84,6 @@
         android:textColor="#fff"
         android:textAllCaps="false"
         android:layout_alignTop="@+id/later"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

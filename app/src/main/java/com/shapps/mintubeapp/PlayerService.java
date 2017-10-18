@@ -391,7 +391,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         serviceHead = (LinearLayout) inflater.inflate(R.layout.service_head, null, false);
         playerHeadImage = (ImageView) serviceHead.findViewById(R.id.song_icon);
 
-        params.gravity = Gravity.TOP | Gravity.LEFT;
+        params.gravity = Gravity.TOP | Gravity.START;
         params.x = 0;
         params.y = 0;
         windowManager.addView(serviceHead, params);
@@ -423,7 +423,7 @@ public class PlayerService extends Service implements View.OnClickListener{
             );
         }
 
-        param_player.gravity = Gravity.TOP | Gravity.LEFT;
+        param_player.gravity = Gravity.TOP | Gravity.START;
         param_player.x = 0;
         param_player.y = playerHeadSize;
         windowManager.addView(playerView, param_player);
