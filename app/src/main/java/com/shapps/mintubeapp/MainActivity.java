@@ -71,10 +71,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     private CustomSwipeRefresh swipeRefreshLayout;
     private boolean exit = false;
 
-    private Button retry, changeSettings, exitApp;
-
-    private ViewStub viewStub;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -83,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        viewStub = (ViewStub) findViewById(R.id.view_stub);
+        ViewStub viewStub = (ViewStub) findViewById(R.id.view_stub);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
 
@@ -232,9 +228,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             viewStub.inflate();
 
             exit = true;
-            retry = (Button) findViewById(R.id.retry_internet);
-            changeSettings = (Button) findViewById(R.id.change_settings);
-            exitApp = (Button) findViewById(R.id.exit_app);
+            Button retry = (Button) findViewById(R.id.retry_internet);
+            Button changeSettings = (Button) findViewById(R.id.change_settings);
+            Button exitApp = (Button) findViewById(R.id.exit_app);
             retry.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

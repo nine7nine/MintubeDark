@@ -22,13 +22,13 @@ public class YTubeView extends Activity{//extends YouTubeFailureRecoveryActivity
     //For Result Activity
     private static int OVERLAY_PERMISSION_REQ = 1234;
     private static int OVERLAY_PERMISSION_REQ_BACKTO_ACT = 2345;
-    private static SharedPreferences sharedPref;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        SharedPreferences sharedPref;
         sharedPref = getApplicationContext().getSharedPreferences(getString(R.string.FileName), Context.MODE_PRIVATE);
         if (!sharedPref.contains(getString(R.string.init))) {
             Log.d("Initializing ", "Shared Preferences");

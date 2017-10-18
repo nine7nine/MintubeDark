@@ -18,7 +18,6 @@ import android.widget.Button;
 public class GetPermission extends AppCompatActivity {
 
     private static int OVERLAY_PERMISSION_REQ_CODE = 12345;
-    private static int OVERLAY_PERMISSION_REQ_BACKTO_ACT_CODE = 23456;
     private String vId, pId;
     private int permissionCode;
 
@@ -35,6 +34,8 @@ public class GetPermission extends AppCompatActivity {
             permissionCode = OVERLAY_PERMISSION_REQ_CODE;
         }
         else{
+            int OVERLAY_PERMISSION_REQ_BACKTO_ACT_CODE;
+            OVERLAY_PERMISSION_REQ_BACKTO_ACT_CODE = 23456;
             permissionCode = OVERLAY_PERMISSION_REQ_BACKTO_ACT_CODE;
         }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -51,8 +51,6 @@ import java.util.concurrent.ExecutionException;
 public class PlayerService extends Service implements View.OnClickListener{
 
     private static Context mContext;
-    private static Bitmap bitmap;
-    private static String title, author;
     private static PlayerService playerService;
     private static WindowManager windowManager;
     private static LinearLayout serviceHead, serviceClose, serviceCloseBackground, playerView, webPlayerLL;
@@ -73,8 +71,6 @@ public class PlayerService extends Service implements View.OnClickListener{
     private int playerHeadCenterX, playerHeadCenterY, closeMinX, closeMinY, closeMaxX, closeImgSize;
     private int scrnWidth, scrnHeight, defaultPlayerWidth,playerWidth, playerHeight, playerHeadSize, closeImageLayoutSize, xAtHiding, yAtHiding, xOnAppear, yOnAppear = 0;
 
-    private static Intent fullScreenIntent;
-
     //is inside the close button so to stop video
     private boolean isInsideClose = false;
     //is width entire to show video properly
@@ -85,7 +81,8 @@ public class PlayerService extends Service implements View.OnClickListener{
     private static boolean replayVid = false;
     private static boolean replayPlaylist = false;
 
-    private ImageView repeatTypeImg, entireWidthImg, fullScreenImg;
+    private ImageView repeatTypeImg;
+    private ImageView entireWidthImg;
     private SharedPreferences sharedPref;
     private static int noItemsInPlaylist, currVideoIndex;
 
@@ -460,7 +457,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         //Player Controls
         repeatTypeImg = (ImageView) playerView.findViewById(R.id.repeat_type);
         entireWidthImg = (ImageView) playerView.findViewById(R.id.entire_width);
-        fullScreenImg = (ImageView) playerView.findViewById(R.id.fullscreen);
+        ImageView fullScreenImg = (ImageView) playerView.findViewById(R.id.fullscreen);
 
         //update Repeat Type Onclick
         updateRepeatTypeImage();
@@ -673,13 +670,13 @@ public class PlayerService extends Service implements View.OnClickListener{
         Log.d("Setting ", "Image, Title, Author");
 
         try {
-            bitmap = new ImageLoadTask("https://i.ytimg.com/vi/" + videoId + "/mqdefault.jpg").execute().get();
+            Bitmap bitmap = new ImageLoadTask("https://i.ytimg.com/vi/" + videoId + "/mqdefault.jpg").execute().get();
             String details = new LoadDetailsTask(
                     "https://www.youtube.com/oembed?url=http://www.youtu.be/watch?v=" + videoId + "&format=json")
                     .execute().get();
             JSONObject detailsJson = new JSONObject(details);
-            title = detailsJson.getString("title");
-            author = detailsJson.getString("author_name");
+            String title = detailsJson.getString("title");
+            String author = detailsJson.getString("author_name");
 
             viewBig.setImageViewBitmap(R.id.thumbnail, bitmap);
             viewSmall.setImageViewBitmap(R.id.thumbnail, bitmap);
@@ -748,7 +745,7 @@ public class PlayerService extends Service implements View.OnClickListener{
             //Handle Full Screen
             case R.id.fullscreen:
                 webPlayer.loadScript(JavaScript.pauseVideoScript());
-                fullScreenIntent = new Intent(getAppContext(), FullscreenWebPlayer.class);
+                Intent fullScreenIntent = new Intent(getAppContext(), FullscreenWebPlayer.class);
                 fullScreenIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 //remove Views
                 windowManager.removeView(serviceHead);

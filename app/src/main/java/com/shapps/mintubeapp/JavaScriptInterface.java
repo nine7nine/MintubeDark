@@ -13,8 +13,8 @@ import java.util.regex.Pattern;
  * Created by shyam on 18/2/16.
  */
 class JavaScriptInterface {
-    private Context context;
-    private static Handler handlerForJavascriptInterface = new Handler();
+    static Context context;
+    static Handler handlerForJavascriptInterface = new Handler();
     public JavaScriptInterface(PlayerService playerService) {
         this.context = playerService;
     }
