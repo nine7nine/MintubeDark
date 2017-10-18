@@ -459,16 +459,11 @@ public class PlayerService extends Service implements View.OnClickListener{
 
         //Player Controls
         repeatTypeImg = (ImageView) playerView.findViewById(R.id.repeat_type);
-        entireWidthImg = (ImageView) playerView.findViewById(R.id.entire_width);
         ImageView fullScreenImg = (ImageView) playerView.findViewById(R.id.fullscreen);
 
         //update Repeat Type Onclick
         updateRepeatTypeImage();
         repeatTypeImg.setOnClickListener(this);
-
-        //Handle Entire Width
-
-        entireWidthImg.setOnClickListener(this);
 
         //Handle Full Screen
         fullScreenImg.setOnClickListener(this);
@@ -720,47 +715,6 @@ public class PlayerService extends Service implements View.OnClickListener{
                 playerViewParams = (WindowManager.LayoutParams) playerView.getLayoutParams();
                 //start full Screen Player
                 mContext.startActivity(fullScreenIntent);
-                break;
-            //Handle Entire Width
-            case R.id.entire_width:
-                //Enter Entire Width
-                if(getPlayer().getMeasuredWidth() != scrnWidth) {
-                    param_player.width = WindowManager.LayoutParams.MATCH_PARENT;
-                    windowManager.updateViewLayout(playerView, param_player);
-                    ViewGroup.LayoutParams fillWidthParamLL = webPlayerLL.getLayoutParams();
-                    fillWidthParamLL.width = WindowManager.LayoutParams.MATCH_PARENT;
-                    webPlayerLL.setLayoutParams(fillWidthParamLL);
-                    ViewGroup.LayoutParams fillWidthParamFrame = webPlayerFrame.getLayoutParams();
-                    fillWidthParamFrame.width = WindowManager.LayoutParams.MATCH_PARENT;
-                    webPlayerFrame.setLayoutParams(fillWidthParamFrame);
-                    ViewGroup.LayoutParams fillWidthParam = viewToHide.getLayoutParams();
-                    fillWidthParam.width = WindowManager.LayoutParams.MATCH_PARENT;
-                    viewToHide.setLayoutParams(fillWidthParam);
-                    ViewGroup.LayoutParams playerEntireWidPar = getPlayer().getLayoutParams();
-                    playerEntireWidPar.width = WindowManager.LayoutParams.MATCH_PARENT;
-                    viewToHide.updateViewLayout(getPlayer(), playerEntireWidPar);
-                    entireWidthImg.setImageDrawable(getResources().getDrawable(R.drawable.ic_entire_width_exit));
-                    isEntireWidth = true;
-                }
-                //Exit Entire Width
-                else{
-                    param_player.width = defaultPlayerWidth;
-                    windowManager.updateViewLayout(playerView, param_player);
-                    ViewGroup.LayoutParams fillWidthParamLL = webPlayerLL.getLayoutParams();
-                    fillWidthParamLL.width = defaultPlayerWidth;
-                    webPlayerLL.setLayoutParams(fillWidthParamLL);
-                    ViewGroup.LayoutParams fillWidthParamFrame = webPlayerFrame.getLayoutParams();
-                    fillWidthParamFrame.width = defaultPlayerWidth;
-                    webPlayerFrame.setLayoutParams(fillWidthParamFrame);
-                    ViewGroup.LayoutParams fillWidthParam = viewToHide.getLayoutParams();
-                    fillWidthParam.width = defaultPlayerWidth;
-                    viewToHide.setLayoutParams(fillWidthParam);
-                    ViewGroup.LayoutParams playerEntireWidPar = getPlayer().getLayoutParams();
-                    playerEntireWidPar.width = defaultPlayerWidth;
-                    viewToHide.updateViewLayout(getPlayer(), playerEntireWidPar);
-                    entireWidthImg.setImageDrawable(getResources().getDrawable(R.drawable.ic_entire_width));
-                    isEntireWidth = false;
-                }
                 break;
             //Handle Repeat Settings
             case R.id.repeat_type:
