@@ -371,7 +371,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     }
 
     public static boolean isInternetAvailable(Context context) {
-        NetworkInfo info = (NetworkInfo) ((ConnectivityManager)
+        NetworkInfo info;
+        info = ((ConnectivityManager)
                 context.getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
 
         if (info == null) {
