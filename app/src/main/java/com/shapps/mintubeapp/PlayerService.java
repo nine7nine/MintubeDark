@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.PixelFormat;
 import android.graphics.Point;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -636,9 +637,10 @@ public class PlayerService extends Service implements View.OnClickListener{
 
         try {
             Bitmap bitmap = new ImageLoadTask("https://i.ytimg.com/vi/" + videoId + "/mqdefault.jpg").execute().get();
-            String details = new LoadDetailsTask(
+            String details;
+            details = new LoadDetailsTask(
                     "https://www.youtube.com/oembed?url=http://www.youtu.be/watch?v=" + videoId + "&format=json")
-                    .execute().get();
+                    .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR).get();
             JSONObject detailsJson = new JSONObject(details);
             String title = detailsJson.getString("title");
             String author = detailsJson.getString("author_name");
