@@ -3,7 +3,6 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
     android:weightSum="7"
     android:alpha="0.9">
 

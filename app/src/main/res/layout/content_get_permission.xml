@@ -9,13 +9,11 @@
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin"
     android:gravity="center_horizontal"
-    tools:showIn="@layout/activity_get_permission"
-    android:background="#000">
+    tools:showIn="@layout/activity_get_permission">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000"
         android:textColor="#fff"
         android:text="@string/string_get_permission"/>
 
