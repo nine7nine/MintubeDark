@@ -14,6 +14,7 @@ import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -33,6 +34,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.view.ViewStub;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
@@ -53,6 +55,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -82,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         ViewStub viewStub = (ViewStub) findViewById(R.id.view_stub);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+
 
         if(isInternetAvailable(mainAct)) {
 
@@ -119,6 +123,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
             youtubeView = (WebView) findViewById(R.id.youtube_view);
             youtubeView.getSettings().setJavaScriptEnabled(true);
+            // disable local file system to reduce attack surface
+            youtubeView.getSettings().setAllowFileAccess(false);
             youtubeView.setWebViewClient(new WebViewClient() {
                 @Override
                 public void onPageStarted(WebView view, String str, Bitmap bitmap) {
@@ -261,6 +267,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         }
         return false;
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
