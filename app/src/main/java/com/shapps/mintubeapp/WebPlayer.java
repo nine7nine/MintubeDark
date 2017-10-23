@@ -1,14 +1,9 @@
 package com.shapps.mintubeapp;
 
 import android.content.Context;
-import android.os.Build;
-import android.view.MotionEvent;
-import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import java.util.Map;
 
 import static android.webkit.WebView.*;
 

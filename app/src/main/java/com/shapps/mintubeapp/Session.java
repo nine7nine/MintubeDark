@@ -1,7 +1,5 @@
 package com.shapps.mintubeapp;
 
-import android.util.Log;
-
 /**
  * Created by shyam on 2/2/16.
  */

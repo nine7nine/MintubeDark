@@ -4,10 +4,6 @@ import android.content.Context;
 import android.os.Handler;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
-import android.webkit.WebView;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by shyam on 18/2/16.
