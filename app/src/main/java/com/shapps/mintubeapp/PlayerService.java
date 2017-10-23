@@ -55,7 +55,7 @@ public class PlayerService extends Service implements View.OnClickListener{
     private static Context mContext;
     private static PlayerService playerService;
     private static WindowManager windowManager;
-    private static LinearLayout serviceHead, serviceClose, serviceCloseBackground, playerView, webPlayerLL;
+    private static LinearLayout serviceHead, serviceClose, serviceCloseBackground, playerView;
     private FrameLayout webPlayerFrame;
     private static WindowManager.LayoutParams servHeadParams, servCloseParams, servCloseBackParams, playerViewParams;
     private WindowManager.LayoutParams param_player, params, param_close, param_close_back, parWebView;
@@ -399,7 +399,6 @@ public class PlayerService extends Service implements View.OnClickListener{
         playerView = (LinearLayout) inflater.inflate(R.layout.player_webview, null, false);
         viewToHide = (RelativeLayout) playerView.findViewById(R.id.view_to_hide);
         webPlayerFrame = (FrameLayout) playerView.findViewById(R.id.web_player_frame);
-        webPlayerLL = (LinearLayout) playerView.findViewById(R.id.web_player_ll);
 
         webPlayer = new WebPlayer(this);
         webPlayer.setupPlayer();
