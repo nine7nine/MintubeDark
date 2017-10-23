@@ -27,6 +27,8 @@ class WebPlayer {
 
     public void setupPlayer() {
         player.getSettings().setJavaScriptEnabled(true);
+        // disable local file system to reduce attack surface
+        player.getSettings().setAllowFileAccess(false);
 
 
 //         For debugging using chrome on PC

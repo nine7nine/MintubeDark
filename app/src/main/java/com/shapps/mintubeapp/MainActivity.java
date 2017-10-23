@@ -402,7 +402,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         searchView.clearFocus();
         return true;
     }
-    
+
     @Override
     public boolean onQueryTextChange(String newText) {
         if(newText.length() > 0) {
