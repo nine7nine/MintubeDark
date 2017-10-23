@@ -83,7 +83,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
 
-
         if(isInternetAvailable(mainAct)) {
 
             viewStub.setLayoutResource(R.layout.content_main);
@@ -255,6 +254,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         }
 
     }
+
     private boolean isServiceRunning(Class<PlayerService> playerServiceClass) {
         ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
         for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
@@ -285,6 +285,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             mainAct.recreate();
         }
     }
+
     private void needPermissionDialog(final int requestCode) {
         if(requestCode == OVERLAY_PERMISSION_REQ) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -310,6 +311,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             builder.show();
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -343,6 +345,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         return super.onOptionsItemSelected(item);
     }
+
     @Override
     public void onBackPressed() {
         if(exit){
@@ -399,6 +402,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         searchView.clearFocus();
         return true;
     }
+    
     @Override
     public boolean onQueryTextChange(String newText) {
         if(newText.length() > 0) {
