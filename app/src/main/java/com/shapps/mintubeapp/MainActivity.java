@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
                 @Override
                 public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
-                        if (String.valueOf(request.getUrl()).contains("http://m.youtube.com/watch?") ||
+                        if (String.valueOf(request.getUrl()).contains("https://m.youtube.com/watch?") ||
                                 String.valueOf(request.getUrl()).contains("https://m.youtube.com/watch?")) {
                             String url = String.valueOf(request.getUrl());
                             Log.d("Yay Catches!!!! ", url);
@@ -400,7 +400,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     @Override
     public boolean onQueryTextSubmit(String query) {
-        youtubeView.loadUrl("http://m.youtube.com/results?q="+ query);
+        youtubeView.loadUrl("https://m.youtube.com/results?q="+ query);
         searchView.clearFocus();
         return true;
     }
@@ -409,7 +409,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     public boolean onQueryTextChange(String newText) {
         if(newText.length() > 0) {
             newText = newText.replace(" ", "+");
-            String url = "http://suggestqueries.google.com/complete/search?client=youtube&ds=yt&client=firefox&q="
+            String url = "https://suggestqueries.google.com/complete/search?client=youtube&ds=yt&client=firefox&q="
                     + newText;
             JsonArrayRequest req = new JsonArrayRequest(url,
                     new Response.Listener<JSONArray>() {

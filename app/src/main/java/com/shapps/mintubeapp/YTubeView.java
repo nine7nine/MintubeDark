@@ -89,7 +89,7 @@ public class YTubeView extends Activity{//extends YouTubeFailureRecoveryActivity
             }
             Log.d("Video Id : ", vId);
             //Getting Playlist id
-            final String listID = link.substring(link.indexOf("http") + 4, link.length());
+            final String listID = link.substring(link.indexOf("https") + 4, link.length());
             Log.d("List ID Is : ", listID);
             pId = null;
             String regex = ".*list=([A-Za-z0-9_-]+).*?";
