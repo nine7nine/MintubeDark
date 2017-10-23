@@ -7,14 +7,9 @@
         android:id="@+id/web_player_frame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <LinearLayout
-            android:gravity="center"
-            android:layout_gravity="top|end"
-            android:layout_width="60dp"
-            android:layout_height="20dp">
-        </LinearLayout>
+
         <RelativeLayout
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="2dp"
             android:id="@+id/view_to_hide"
             android:layout_width="240dp"
             android:layout_height="200dp">
