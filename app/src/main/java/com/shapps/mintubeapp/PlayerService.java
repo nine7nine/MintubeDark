@@ -409,7 +409,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         //------------------------------Got Player Id--------------------------------------------------------
         //noinspection MismatchedQueryAndUpdateOfCollection
         Map<String, String> hashMap = new HashMap<>();
-        hashMap.put("Referer", "http://www.youtube.com");
+        hashMap.put("Referer", "https://www.youtube.com");
         if(Constants.linkType == 1) {
             Log.d("Starting ", "Playlist!!!");
             ConstantStrings.setPList(PLIST_ID);
