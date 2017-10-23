@@ -1,4 +1,4 @@
-package com.shapps.mintubeapp;
+package com.noshadez.mintubeappdark;
 
 /**
  * Created by shyam on 16/2/16.
@@ -71,13 +71,13 @@ class Constants {
 
     //Actions
     public interface ACTION {
-        String PREV_ACTION = "com.shapps.ytube.action.prev";
-        String PAUSE_PLAY_ACTION = "com.shapps.ytube.action.play";
-        String NEXT_ACTION = "com.shapps.ytube.action.next";
-        String STARTFOREGROUND_WEB_ACTION = "com.shapps.ytube.action.playingweb";
-        String STOPFOREGROUND_WEB_ACTION = "com.shapps.ytube.action.stopplayingweb";
-        String STARTFOREGROUND_YTUBE_ACTION = "com.shapps.ytube.action.playingytube";
-        String STOPFOREGROUND_YTUBE_ACTION = "com.shapps.ytube.action.stopplayingytube";
+        String PREV_ACTION = "com.noshadez.ytube.action.prev";
+        String PAUSE_PLAY_ACTION = "com.noshadez.ytube.action.play";
+        String NEXT_ACTION = "com.noshadez.ytube.action.next";
+        String STARTFOREGROUND_WEB_ACTION = "com.noshadez.ytube.action.playingweb";
+        String STOPFOREGROUND_WEB_ACTION = "com.noshadez.ytube.action.stopplayingweb";
+        String STARTFOREGROUND_YTUBE_ACTION = "com.noshadez.ytube.action.playingytube";
+        String STOPFOREGROUND_YTUBE_ACTION = "com.noshadez.ytube.action.stopplayingytube";
     }
 
     //Notification Id

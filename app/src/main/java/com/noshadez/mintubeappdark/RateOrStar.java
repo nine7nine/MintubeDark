@@ -1,4 +1,4 @@
-package com.shapps.mintubeapp;
+package com.noshadez.mintubeappdark;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

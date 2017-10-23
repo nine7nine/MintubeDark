@@ -1,4 +1,4 @@
-package com.shapps.mintubeapp.CustomViews;
+package com.noshadez.mintubeappdark.CustomViews;
 
 import android.content.Context;
 import android.support.v4.widget.SwipeRefreshLayout;

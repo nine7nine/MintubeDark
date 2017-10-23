@@ -1,4 +1,4 @@
-package com.shapps.mintubeapp;
+package com.noshadez.mintubeappdark;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -46,8 +46,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.shapps.mintubeapp.CustomViews.CustomSwipeRefresh;
-import com.shapps.mintubeapp.CustomVolley.AppController;
+import com.noshadez.mintubeappdark.CustomViews.CustomSwipeRefresh;
+import com.noshadez.mintubeappdark.CustomVolley.AppController;
 
 import org.json.JSONArray;
 import org.json.JSONException;

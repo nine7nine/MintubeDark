@@ -13,9 +13,9 @@
 # and specify the fully qualified class name to the JavaScript interface
 # class:
 #JS Interface
--keep public class com.shapps.mintubeapp.JavaScriptInterface
--keep public class * implements com.shapps.mintubeapp.JavaScriptInterface
--keepclassmembers class com.shapps.mintubeapp.JavaScriptInterface {
+-keep public class com.noshadez.mintubeappdark.JavaScriptInterface
+-keep public class * implements com.noshadez.mintubeappdark.JavaScriptInterface
+-keepclassmembers class com.noshadez.mintubeappdark.JavaScriptInterface {
     <methods>;
 }
 #For crashlytics in fabric

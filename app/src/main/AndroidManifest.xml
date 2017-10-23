@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shapps.mintubeapp">
+    package="com.noshadez.mintubeappdark">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -32,7 +32,7 @@
 
         <!--
             activity
-            android:name="com.shapps.mintube.YouTube.YoutubePlayer"
+            android:name="com.noshadez.mintube.YouTube.YoutubePlayer"
             android:label="@string/add_ytube"
             android:theme="@style/AppTheme.NoActionBar" /
         -->

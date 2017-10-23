@@ -1,4 +1,4 @@
-package com.shapps.mintubeapp.CustomViews;
+package com.noshadez.mintubeappdark.CustomViews;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -21,7 +21,7 @@ import android.support.annotation.DrawableRes;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 
-import com.shapps.mintubeapp.R;
+import com.noshadez.mintubeappdark.R;
 
 /**
  * Created by shyam on 2/3/16.

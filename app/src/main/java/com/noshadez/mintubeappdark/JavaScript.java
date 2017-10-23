@@ -1,4 +1,4 @@
-package com.shapps.mintubeapp;
+package com.noshadez.mintubeappdark;
 
 /**
  * Created by shyam on 19/2/16.

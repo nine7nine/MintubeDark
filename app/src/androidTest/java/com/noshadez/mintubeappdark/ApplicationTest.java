@@ -1,4 +1,4 @@
-package com.shapps.mintubeapp;
+package com.noshadez.mintubeappdark;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

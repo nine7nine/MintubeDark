@@ -1,4 +1,4 @@
-package com.shapps.mintubeapp;
+package com.noshadez.mintubeappdark;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -33,9 +33,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.RemoteViews;
 
-import com.shapps.mintubeapp.AsyncTask.ImageLoadTask;
-import com.shapps.mintubeapp.AsyncTask.LoadDetailsTask;
-import com.shapps.mintubeapp.CustomViews.CircularImageView;
+import com.noshadez.mintubeappdark.AsyncTask.ImageLoadTask;
+import com.noshadez.mintubeappdark.AsyncTask.LoadDetailsTask;
+import com.noshadez.mintubeappdark.CustomViews.CircularImageView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -45,7 +45,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
-import static com.shapps.mintubeapp.WebPlayer.*;
+import static com.noshadez.mintubeappdark.WebPlayer.*;
 
 /**
  * Created by shyam on 12/2/16.
