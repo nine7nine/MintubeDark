@@ -104,7 +104,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 dialog.show();
                 break;
             case R.id.about:
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://imshyam.github.io/mintube"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/nine7nine/MintubeDark/blob/master/README.md"));
                 startActivity(browserIntent);
                 break;
             default:
