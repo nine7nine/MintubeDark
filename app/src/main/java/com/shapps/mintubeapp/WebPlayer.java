@@ -1,6 +1,7 @@
 package com.shapps.mintubeapp;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -24,6 +25,8 @@ class WebPlayer {
         player.getSettings().setJavaScriptEnabled(true);
         // disable local file system to reduce attack surface
         player.getSettings().setAllowFileAccess(false);
+
+        player.setBackgroundColor(Color.parseColor("#000000"));
 
 
 //         For debugging using chrome on PC

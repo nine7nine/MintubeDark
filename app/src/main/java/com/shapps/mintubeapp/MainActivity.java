@@ -121,6 +121,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             youtubeView.getSettings().setJavaScriptEnabled(true);
             // disable local file system to reduce attack surface
             youtubeView.getSettings().setAllowFileAccess(false);
+            youtubeView.getSettings().setAllowFileAccessFromFileURLs(false);
+
             youtubeView.setWebViewClient(new WebViewClient() {
                 @Override
                 public void onPageStarted(WebView view, String str, Bitmap bitmap) {
