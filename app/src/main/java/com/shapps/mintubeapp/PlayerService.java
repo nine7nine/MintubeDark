@@ -638,7 +638,7 @@ public class PlayerService extends Service implements View.OnClickListener{
             Bitmap bitmap = new ImageLoadTask("https://i.ytimg.com/vi/" + videoId + "/mqdefault.jpg").execute().get();
             String details;
             details = new LoadDetailsTask(
-                    "https://www.youtube.com/oembed?url=http://www.youtu.be/watch?v=" + videoId + "&format=json")
+                    "https://www.youtube.com/oembed?url=http://www.youtu.be/v/" + videoId + "&format=json")
                     .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR).get();
             JSONObject detailsJson = new JSONObject(details);
             String title = detailsJson.getString("title");
