@@ -1,5 +1,5 @@
 # MinTubeDark
-Minimized/Floating Youtube
+Minimized/Floating Youtube Player for Android (sdk 23+)
 
 This is a personal fork of Mintube.
 
