@@ -554,7 +554,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                                 }
                                 windowManager.updateViewLayout(serviceHead, params);
                             }
-                        
+
                         return true;
                     case MotionEvent.ACTION_MOVE:
                         int newX, newY;
