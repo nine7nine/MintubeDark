@@ -27,7 +27,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -35,7 +34,6 @@ import android.widget.RemoteViews;
 
 import com.noshadez.mintubeappdark.AsyncTask.ImageLoadTask;
 import com.noshadez.mintubeappdark.AsyncTask.LoadDetailsTask;
-import com.noshadez.mintubeappdark.CustomViews.CircularImageView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
