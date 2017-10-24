@@ -550,14 +550,11 @@ public class PlayerService extends Service implements View.OnClickListener{
                                 stopService(new Intent(PlayerService.this, PlayerService.class));
                             }
                             else if (!visible) {
-                                if (params.x > scrnWidth / 2) {
-                                    params.x = scrnWidth - playerHeadSize + playerHeadSize / 4;
-                                } else {
                                     params.x = -playerHeadSize / 4;
                                 }
                                 windowManager.updateViewLayout(serviceHead, params);
                             }
-                        }
+                        
                         return true;
                     case MotionEvent.ACTION_MOVE:
                         int newX, newY;

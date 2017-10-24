@@ -12,7 +12,8 @@
             android:id="@+id/view_to_hide"
             android:layout_width="240dp"
             android:layout_height="200dp"
-            android:layout_marginTop="-2dp"></RelativeLayout>
+            android:layout_marginTop="-2dp">
+        </RelativeLayout>
 
         <include
             layout="@layout/controls"
