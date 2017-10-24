@@ -2,6 +2,7 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
+
     <RelativeLayout
         android:id="@+id/view_to_hide"
         android:layout_width="wrap_content"
@@ -11,10 +12,11 @@
             android:id="@+id/playerView"
             android:layout_width="200dp"
             android:layout_height="110dp" />
+
         <RelativeLayout
-            android:layout_below="@id/playerView"
             android:layout_width="200dp"
-            android:layout_height="20dp">
+            android:layout_height="20dp"
+            android:layout_below="@id/playerView">
 
         </RelativeLayout>
     </RelativeLayout>
