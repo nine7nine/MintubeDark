@@ -15,10 +15,3 @@ The original Author/Developer's code and website are found here;
 3. to Learn more about Java, Android Studio, Lint, etc - by using a smaller app/project; where the codebase isn't gianormous or incredibly hard or difficult to understand.
 6. Development of Mintube has been slow with almost zero commits this year.
 5. for fun ;)
-
-Current bugs: 
-
-- On auto-rotate it is possible to hide the head player in landscape mode, by putting it below the bottom in Portrait mode.
-- when the webview player is hidden it is possible to move the head player above system bar which is problematic. same goes with the navbar
-
-no fix yet, so just don't do that. lol
