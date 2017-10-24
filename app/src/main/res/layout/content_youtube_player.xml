@@ -23,12 +23,12 @@
         android:id="@+id/item1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AdhUUgjZgbo"/>
+        android:text="@string/adhuugjzgbo"/>
     <Button
         android:layout_below="@id/item1"
         android:id="@+id/item2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="oyEuk8j8imI"/>
+        android:text="@string/oyeuk8j8imi"/>
 
 </RelativeLayout>

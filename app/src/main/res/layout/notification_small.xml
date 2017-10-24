@@ -22,7 +22,7 @@
         android:textColor="#ddd"
         android:textSize="12sp"
         android:layout_height="match_parent"
-        android:text="Loading Author"
+        android:text="@string/loading_author"
         android:alpha="0.9" />
     <LinearLayout
         android:layout_width="0dp"

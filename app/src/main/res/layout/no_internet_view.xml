@@ -49,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:textColor="#353535"
                 android:textSize="25sp"
-                android:text="No Internet Connection"/>
+                android:text="@string/no_internet_connection"/>
         </LinearLayout>
 
         <Button
@@ -59,7 +59,7 @@
             android:textAllCaps="false"
             android:backgroundTint="@color/colorAccent"
             android:textColor="#fff"
-            android:text="Retry"/>
+            android:text="@string/retry"/>
 
         <Button
             android:id="@+id/change_settings"
@@ -69,7 +69,7 @@
             android:textAllCaps="false"
             android:backgroundTint="#64818e"
             android:textColor="#fff"
-            android:text="Change Settings"/>
+            android:text="@string/change_settings"/>
 
         <Button
             android:id="@+id/exit_app"
@@ -79,7 +79,7 @@
             android:textAllCaps="false"
             android:backgroundTint="@color/colorPrimary"
             android:textColor="#fff"
-            android:text="Exit"/>
+            android:text="@string/exit"/>
 
     </LinearLayout>
 

@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#09a5ff"
-        android:text="Get Permission"
+        android:text="@string/get_permission"
         android:textAllCaps="false"
         android:background="#222" />
 

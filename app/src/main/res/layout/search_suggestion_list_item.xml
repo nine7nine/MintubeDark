@@ -13,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_weight="10"
         android:layout_height="wrap_content"
-        android:text="Sample Text"/>
+        android:text="@string/sample_text"/>
 
     <ImageView
         android:contentDescription="@string/put_in_search_box"

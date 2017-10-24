@@ -42,4 +42,22 @@
     <string name="notification_thumbnail_large" />
     <string name="launcher" />
     <string name="put_in_search_box" />
+    <string name="get_permission">Get Permission</string>
+    <string name="retry">Retry</string>
+    <string name="change_settings">Change Settings</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="exit">Exit</string>
+    <string name="general_settings">General Settings</string>
+    <string name="video_quality">Video Quality</string>
+    <string name="_1080p">1080p</string>
+    <string name="player_settings">Player Settings</string>
+    <string name="web_player">Web Player</string>
+    <string name="stop_if_nothing_is_playing">Stop if Nothing is playing</string>
+    <string name="learn_more">Learn More</string>
+    <string name="about">About</string>
+    <string name="adhuugjzgbo">AdhUUgjZgbo</string>
+    <string name="oyeuk8j8imi">oyEuk8j8imI</string>
+    <string name="loading_title">Loading Title</string>
+    <string name="loading_author">Loading Author</string>
+    <string name="sample_text">Sample Text</string>
 </resources>
