@@ -23,7 +23,8 @@ import android.widget.TextView;
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener{
 
     private LinearLayout videoQuality, playerType, about;
-    private CheckBox stopNotPlaying;
+    private Button increaseCount, decreaseCount;
+    private CheckBox fullscreenOnRotate, stopNotPlaying;
     private CoordinatorLayout coordinatorLayout;
     private TextView quality;
     private SharedPreferences sharedPref;
@@ -48,6 +49,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         videoQuality.setOnClickListener(this);
         playerType.setOnClickListener(this);
         about.setOnClickListener(this);
+        increaseCount.setOnClickListener(this);
+        decreaseCount.setOnClickListener(this);
+        fullscreenOnRotate.setOnClickListener(this);
 
         stopNotPlaying.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -119,6 +123,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         videoQuality = (LinearLayout) findViewById(R.id.video_quality);
         playerType = (LinearLayout) findViewById(R.id.player_type);
         about = (LinearLayout) findViewById(R.id.about);
+        increaseCount = (Button) findViewById(R.id.increase_repeat_count);
+        decreaseCount = (Button) findViewById(R.id.decrease_repeat_count);
+        fullscreenOnRotate = (CheckBox) findViewById(R.id.fullscreen_on_rotate);
         stopNotPlaying = (CheckBox) findViewById(R.id.stop_not_playing);
     }
 }
