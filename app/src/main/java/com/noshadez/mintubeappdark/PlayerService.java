@@ -67,7 +67,6 @@ public class PlayerService extends Service implements View.OnClickListener{
     private static NotificationManager notificationManager;
     private static Notification notification;
     private static ImageView playerHeadImage;
-    private int playerHeadCenterX, playerHeadCenterY, closeMinX, closeMinY, closeMaxX;
     private int scrnWidth, scrnHeight, defaultPlayerWidth,playerWidth, playerHeight, playerHeadSize, xAtHiding, yAtHiding, xOnAppear, yOnAppear = 0;
 
     //is inside the close button so to stop video
@@ -81,7 +80,6 @@ public class PlayerService extends Service implements View.OnClickListener{
     private static boolean replayPlaylist = false;
 
     private ImageView repeatTypeImg;
-    private ImageView entireWidthImg;
     private SharedPreferences sharedPref;
     private static int noItemsInPlaylist, currVideoIndex;
 
@@ -655,17 +653,6 @@ public class PlayerService extends Service implements View.OnClickListener{
 
     public static void addStateChangeListener() {
         loadScript(JavaScript.onPlayerStateChangeListener());
-    }
-    private boolean isInsideClose() {
-        if(playerHeadCenterX >= closeMinX && playerHeadCenterX <= closeMaxX){
-            if(playerHeadCenterY >= closeMinY){
-                return true;
-            }
-        }
-        return false;
-    }
-    private int getStatusBarHeight() {
-        return (int) Math.ceil(25 * getApplicationContext().getResources().getDisplayMetrics().density);
     }
 
     //Play video again on exit full screen
