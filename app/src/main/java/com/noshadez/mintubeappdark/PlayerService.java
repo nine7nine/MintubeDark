@@ -480,7 +480,7 @@ public class PlayerService extends Service implements View.OnClickListener{
         serviceClose.setVisibility(View.GONE);
         windowManager.addView(serviceClose, param_close);
 
-        final CircularImageView closeImage = (CircularImageView) serviceClose.findViewById(R.id.close_image);
+        //final CircularImageView closeImage = (CircularImageView) serviceClose.findViewById(R.id.close_image);
 
         //-----------------Handle Click-----------------------------
         playerHeadImage.setOnClickListener(this);
@@ -599,7 +599,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                                 params.y = newY;
                             }
                             params.x = newX;
-                            int [] t = new int[2];
+                            //int [] t = new int[2];
 
                             windowManager.updateViewLayout(serviceHead, params);
                         }

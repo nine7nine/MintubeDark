@@ -37,7 +37,7 @@ class Constants {
 
 
     public static String getPlaybackQuality() {
-        String strPlaybackQuality = "large";
+        String strPlaybackQuality;
         if(playbackQuality == 0){
             strPlaybackQuality = "auto";
         }
