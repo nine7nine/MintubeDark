@@ -8,9 +8,7 @@
     android:layout_centerVertical="false"
     android:layout_gravity="fill_vertical|start"
     android:gravity="center"
-    android:orientation="vertical"
-    android:saveEnabled="true"
-    android:soundEffectsEnabled="false">
+    android:orientation="vertical">
 
     <com.noshadez.mintubeappdark.CustomViews.CircularImageView
         android:id="@+id/song_icon"
