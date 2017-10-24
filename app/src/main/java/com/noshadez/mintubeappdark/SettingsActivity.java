@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
@@ -24,7 +25,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     private LinearLayout videoQuality, playerType, about;
     private Button increaseCount, decreaseCount;
-    private CheckBox fullscreenOnRotate, stopNotPlaying;
+    private CheckBox stopNotPlaying;
     private CoordinatorLayout coordinatorLayout;
     private TextView quality;
     private SharedPreferences sharedPref;
@@ -51,7 +52,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         about.setOnClickListener(this);
         increaseCount.setOnClickListener(this);
         decreaseCount.setOnClickListener(this);
-        fullscreenOnRotate.setOnClickListener(this);
 
         stopNotPlaying.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -125,7 +125,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         about = (LinearLayout) findViewById(R.id.about);
         increaseCount = (Button) findViewById(R.id.increase_repeat_count);
         decreaseCount = (Button) findViewById(R.id.decrease_repeat_count);
-        fullscreenOnRotate = (CheckBox) findViewById(R.id.fullscreen_on_rotate);
         stopNotPlaying = (CheckBox) findViewById(R.id.stop_not_playing);
     }
 }
