@@ -47,14 +47,14 @@ public class YTubeView extends Activity{//extends YouTubeFailureRecoveryActivity
             editor.putInt(getString(R.string.player_type), 0);
             //Playback Quality
             //0 = auto
-            //1 = hd2160
-            //2 = hd1440
-            //3 = hd1080
-            //4 = hd720
-            //5 = large(480p)
-            //6 = medium(360p)
-            //7 = small(240p)
-            //8 = tiny(144p)
+            //1 = 2160hd
+            //2 = 1440hd
+            //3 = 1080hd
+            //4 = 720hd
+            //5 = 480p
+            //6 = 360p
+            //7 = 240p
+            //8 = 144p
             editor.putInt(getString(R.string.videoQuality), 5);
             //Finish sevice if video ended
             editor.putBoolean(getString(R.string.finishOnEnd), false);

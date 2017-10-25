@@ -91,7 +91,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                         Log.d("New Quality", Constants.getPlaybackQuality());
                     }
                 });
-                String[] items = {"Auto", "2160p", "1440p", "1080p", "720p", "480p", "360p", "240p", "144p"};
+                String[] items = {"Auto", "2160hd", "1440hd", "1080hd", "720hd", "480p", "360p", "240p", "144p"};
                 checked[0] = sharedPref.getInt(getString(R.string.videoQuality), 5);
                 Log.d("Old Quality", Constants.getPlaybackQuality());
                 builder.setSingleChoiceItems(items, checked[0], new DialogInterface.OnClickListener(){
