@@ -567,13 +567,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                             if (newY < 0) {
                                 param_player.y = playerHeadSize;
                                 params.y = 0;
-                            } else if (playerHeight + newY + playerHeadSize > scrnHeight) {
-                                //Continue with the drag and don't update head params
-                                // set updateHead = true - to avoide disappearing
                                 updateHead = true;
-                                // Disable hideplayer && params to keep player on screen
-                                //hidePlayer();
-                                //params.y = newY;
                             } else {
                                 param_player.y = newY + playerHeadSize;
                                 params.y = newY;
@@ -584,12 +578,7 @@ public class PlayerService extends Service implements View.OnClickListener{
                                 windowManager.updateViewLayout(playerView, param_player);
                         }
                         else {
-                            if(newY + playerHeadSize > scrnHeight){
-                                params.y = scrnHeight - playerHeadSize;
-                            }
-                            else{
-                                params.y = newY;
-                            }
+                            params.y = newY;
                             params.x = newX;
                             //int [] t = new int[2];
 
